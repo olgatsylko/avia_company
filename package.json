@@ -1,0 +1,22 @@
+{
+  "name": "avia_company",
+  "version": "1.0.0",
+  "description": "test project for avia company",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olgatsylko/avia_company.git"
+  },
+  "author": "Olga Tsylko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olgatsylko/avia_company/issues"
+  },
+  "homepage": "https://github.com/olgatsylko/avia_company#readme",
+  "dependencies": {
+    "prompt-promise": "^1.0.3"
+  }
+}
