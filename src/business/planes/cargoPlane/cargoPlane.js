@@ -1,9 +1,11 @@
+const Plane = require ("../plane");
+
 class CargoPlane extends Plane {
     constructor(model, tailNumber, rangeOfFlight, carryingCapacity){
         super (model, tailNumber, rangeOfFlight);
         this.carryingCapacity = carryingCapacity;
     }
-    getCapacity(){
+    getCarringCapacity(){
         return this.carryingCapacity;
     }
 }

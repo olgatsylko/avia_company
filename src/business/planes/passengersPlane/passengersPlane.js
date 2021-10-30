@@ -1,3 +1,5 @@
+const Plane = require ("../plane");
+
 class PassengersPlane extends Plane {
     constructor(model, tailNumber, rangeOfFlight, passengerCapacity){
         super (model, tailNumber, rangeOfFlight);

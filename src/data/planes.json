@@ -1,0 +1,39 @@
+[
+    {   "planType": "magistralPassPlane",
+        "model": "Boeng",
+        "tailNumber": "RN006",
+        "rangeOfFlight": 330000,
+        "passengerCapacity": 50,
+        "crew": "3"
+    },
+    {   "planType": "utilityPlane",
+        "model": "Boeng",
+        "tailNumber": "RN07",
+        "rangeOfFlight": 200000,
+        "passengerCapacity": 50,
+        "owner": "test"
+   
+    },
+    {   "planType": "servicePlane",
+        "model": "Boeng",
+        "tailNumber": "RN07",
+        "rangeOfFlight": 1000,
+        "carryingCapacity": 50,
+        "purpose": "med"
+   
+    },
+    {   "planType": "transportPlane",
+        "model": "Boeng",
+        "tailNumber": "RN07",
+        "rangeOfFlight": 2000,
+        "carryingCapacity": 50,
+        "ramp": "true"
+    },
+    {   "planType": "transportPlane",
+        "model": "Boeng",
+        "tailNumber": "CC7",
+        "rangeOfFlight": 3000,
+        "carryingCapacity": 70,
+        "ramp": "false"
+    }
+]
