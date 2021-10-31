@@ -9,17 +9,14 @@ const MagistralPassPlane = require ('./business/planes/passengersPlane/magistral
 
 let aviaCompany = new AviaCompanyBuilder('csv')
 .getPlanesData()
-.createPlanePlools()
 .build();
-
 
 (async () => {
     const planeType = parseInt (await prompt ('Press 1 for magistralPass Plane; Press to 2 for utility Plane: Press 3 for service Plane; Press 4 for transport Plane '));
-    if(planeType >= 1 && planeType <=4){      
+    if(planeType >= 1 && planeType <= 4){      
    
         if (planeType === 1 || planeType === 2){
             const numbPass = parseInt (await prompt ('How many pass capacity do you need? '));
-            //console.log(aviaCompany.getPassengersPlanePool());
             if (numbPass > aviaCompany.getMaxPassCap(aviaCompany.getPassengersPlanePool())) {
                 console.log('No such capacity');
             } else {
@@ -53,9 +50,9 @@ let aviaCompany = new AviaCompanyBuilder('csv')
         }
     } else console.log('Invalid plain type, try again');
 
-    // console.log(aviaCompany.getTotalPassCapacity()); 
-    // console.log(aviaCompany.getTotalCarringCapacity());
-    // console.log(aviaCompany.sortByRangeOfFlight(aviaCompany.getTotalPool()));
+    console.log('Total Passengers Capacity is: ' + aviaCompany.getTotalPassCapacity()); 
+    console.log('Total Carring Capacity is: ' + aviaCompany.getTotalCarringCapacity());
+    console.log(aviaCompany.sortByRangeOfFlight(aviaCompany.getTotalPool()));
 
     prompt.finish();
 })();

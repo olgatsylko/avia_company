@@ -24,14 +24,14 @@ class AviaCompanyBuilder{
         } else if (this.dataFile === 'csv'){
             this.readCsvFile();
         } else console.log('error');
-        return this.#planePool; 
+        return this; 
     } 
     readJsonFile() {
         let obj = new PlaneFactory();
         for (let i = 0; i < planes.length; i++){
             this.#planePool[i] = obj.create(planes[i]);
         }
-       return this.#planePool;
+        this.createPlanePlools();
     }
     async readCsvFile() {
         let records = [];
@@ -42,14 +42,10 @@ class AviaCompanyBuilder{
         for (let i = 0; i < records.length; i++){
             this.#planePool[i] = objFact.create(records[i]);
         }   
-        console.log(this.#planePool);
-        return this.#planePool;            
-    } 
+        this.createPlanePlools();                
+    }
     createPlanePlools(){
-        this.getPlanesData();
-        console.log("UUUUUUUUU");
         for (let i = 0; i < this.#planePool.length; i++){
-            console.log("MMMMM");
             if (this.#planePool[i] instanceof PassengersPlane) {
                 this.aviaCompany.getPassengersPlanePool().push(this.#planePool[i]);      
             }
@@ -57,10 +53,8 @@ class AviaCompanyBuilder{
                 this.aviaCompany.getCargoPlanePlool().push(this.#planePool[i]);
             }
         }
-        console.log(this.aviaCompany.getPassengersPlanePool());
         return this;
     }
-
     addPassPlane(planePass){
         this.aviaCompany.getPassengersPlanePool().push(planePass);
         return this;

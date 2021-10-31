@@ -20,14 +20,16 @@ class AviaCompany{
     getTotalCarringCapacity(){
         let count = 0;
         this.#cargoPlanePool.forEach(element => { 
-            count += element.getCarringCapacity(); 
+            let n = parseInt(element.getPassCapacity())
+            count += n; 
         })
         return count;
     }
     getTotalPassCapacity(){
         let count = 0;
         this.#passengersPlanePool.forEach(element => { 
-            count += element.getPassCapacity(); 
+            let n = parseInt(element.getPassCapacity())
+            count += n; 
         })
         return count;
     }
