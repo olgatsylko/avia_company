@@ -4,7 +4,7 @@
         "tailNumber": "RN006",
         "rangeOfFlight": 330000,
         "passengerCapacity": 50,
-        "crew": "3"
+        "crew": 3
     },
     {   "planType": "utilityPlane",
         "model": "Boeng",

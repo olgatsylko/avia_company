@@ -1,5 +1,3 @@
-// const PassengersPlant = require ("./passengersPlane/passengersPlane");
-// const TransportPlant = require ("./cargoPlane/cargoPlane");
 const MagistralPassPlane = require("./passengersPlane/magistralPassPlane");
 const UtilityPlane = require ("./passengersPlane/utilityPlane");
 const ServicePlane = require ("./cargoPlane/servicePlane");

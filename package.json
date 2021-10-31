@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/olgatsylko/avia_company#readme",
   "dependencies": {
-    "prompt-promise": "^1.0.3"
+    "async-xlsx": "0.0.7",
+    "csv-parse": "^4.16.3",
+    "prompt-promise": "^1.0.3",
+    "xlsx": "^0.17.3"
   }
 }

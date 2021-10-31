@@ -4,10 +4,14 @@
 
 const prompt = require('prompt-promise');
 const AviaCompanyBuilder = require('./business/aviaCompany/aviaCompanyBuilder');
+const PassengersPlane = require('./business/planes/passengersPlane/passengersPlane');
+const MagistralPassPlane = require ('./business/planes/passengersPlane/magistralPassPlane');
 
-let aviaCompany = new AviaCompanyBuilder()
-    .createPlanePlools()
-    .build();
+let aviaCompany = new AviaCompanyBuilder('csv')
+.getPlanesData()
+.createPlanePlools()
+.build();
+
 
 (async () => {
     const planeType = parseInt (await prompt ('Press 1 for magistralPass Plane; Press to 2 for utility Plane: Press 3 for service Plane; Press 4 for transport Plane '));
@@ -15,6 +19,7 @@ let aviaCompany = new AviaCompanyBuilder()
    
         if (planeType === 1 || planeType === 2){
             const numbPass = parseInt (await prompt ('How many pass capacity do you need? '));
+            //console.log(aviaCompany.getPassengersPlanePool());
             if (numbPass > aviaCompany.getMaxPassCap(aviaCompany.getPassengersPlanePool())) {
                 console.log('No such capacity');
             } else {

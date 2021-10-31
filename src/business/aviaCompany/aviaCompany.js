@@ -1,30 +1,32 @@
 class AviaCompany{
+    #passengersPlanePool;
+    #cargoPlanePool;
+    #totalPool;
+
     constructor(){
-        this.passengersPlanePool = [];
-        this.cargoPlanePool = [];
-        this.totalPool = [];
+        this.#passengersPlanePool = [];
+        this.#cargoPlanePool = [];
+        this.#totalPool = [];
     }
     getPassengersPlanePool(){
-        return this.passengersPlanePool;
+        return this.#passengersPlanePool;
     }
     getCargoPlanePlool(){
-        return this.cargoPlanePool;
+        return this.#cargoPlanePool;
     }
-
     getTotalPool(){
-        return this.totalPool = [...this.passengersPlanePool, ...this.cargoPlanePool];
+        return this.#totalPool = [...this.#passengersPlanePool, ...this.#cargoPlanePool];
     }
-
     getTotalCarringCapacity(){
         let count = 0;
-        this.cargoPlanePool.forEach(element => { 
+        this.#cargoPlanePool.forEach(element => { 
             count += element.getCarringCapacity(); 
         })
         return count;
     }
     getTotalPassCapacity(){
         let count = 0;
-        this.passengersPlanePool.forEach(element => { 
+        this.#passengersPlanePool.forEach(element => { 
             count += element.getPassCapacity(); 
         })
         return count;
@@ -53,7 +55,6 @@ class AviaCompany{
         })
         return array[0].getPassCapacity();
     }
-    
     toString(){
         return `The company has: passenger planes - '${this.passengersPlanePool}' and cargo planes - '${this.cargoPlanePool}'`
     }
