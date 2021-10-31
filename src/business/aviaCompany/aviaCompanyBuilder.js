@@ -26,6 +26,7 @@ class AviaCompanyBuilder{
         } else console.log('error');
         return this; 
     } 
+
     readJsonFile() {
         let obj = new PlaneFactory();
         for (let i = 0; i < planes.length; i++){

@@ -7,7 +7,7 @@ const AviaCompanyBuilder = require('./business/aviaCompany/aviaCompanyBuilder');
 const PassengersPlane = require('./business/planes/passengersPlane/passengersPlane');
 const MagistralPassPlane = require ('./business/planes/passengersPlane/magistralPassPlane');
 
-let aviaCompany = new AviaCompanyBuilder('csv')
+let aviaCompany = new AviaCompanyBuilder('json')
 .getPlanesData()
 .build();
 
